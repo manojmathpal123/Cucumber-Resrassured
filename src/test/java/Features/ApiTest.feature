@@ -1,5 +1,5 @@
-@sanity
-Feature: Verify the post request
+
+Feature: Verify the  Api CRUD Operation request
 
   Scenario Outline: Verify the post call with data
     Given post call with the "<url>" and payload.
