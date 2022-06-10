@@ -1,0 +1,7 @@
+{
+  "cucumberautocomplete.steps": [
+    "stepDefinitions/*java"
+  ],
+  "cucumberautocomplete.syncfeatures": "/home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/*feature",
+  "cucumberautocomplete.strictGherkinCompletion": true
+}

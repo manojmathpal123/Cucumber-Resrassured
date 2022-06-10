@@ -1,0 +1,272 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 20847376757,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on Home Page",
+            "match": {
+              "location": "stepDefinitions.Steps.user_is_on_Home_Page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-06-10T08:52:26.101Z",
+        "before": [
+          {
+            "result": {
+              "duration": 32395533,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HclHooks.Sdethook.getProperty()"
+            }
+          },
+          {
+            "result": {
+              "duration": 40628459204,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HclHooks.Sdethook.launchbrowser()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Successful Login with Valid Credentials and parameter 2.",
+        "description": "",
+        "id": "login-action-with-parameter;successful-login-with-valid-credentials-and-parameter-2.",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)\" because \"this.driver\" is null\n\tat HclHooks.Sdethook.teardown(Sdethook.java:54)\n",
+              "duration": 2073757,
+              "status": "failed"
+            },
+            "match": {
+              "location": "HclHooks.Sdethook.teardown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1117822458,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User enters \"standard_user1\" and \"secret_sauce1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"standard_user1\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"secret_sauce1\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinitions.Steps.user_enters_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3959909,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Message displayed Login Successfully",
+            "match": {
+              "location": "stepDefinitions.Steps.message_displayed_Login_Successfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[text()\u003d\"Sauce Labs Backpack\"]\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027manoj-Latitude-3510\u0027, ip: \u0027127.0.1.1\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00275.4.0-117-generic\u0027, java.version: \u002718.0.1.1\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 100.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220519220738, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 12215, moz:profile: /tmp/rust_mozprofileeTfig9, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.4.0-117-generic, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 3a6a7183-0962-4b7d-a3b7-2b14b70740fb\n*** Element info: {Using\u003dxpath, value\u003d//div[text()\u003d\"Sauce Labs Backpack\"]}\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat stepDefinitions.Steps.select_the_item(Steps.java:44)\n\tat ✽.Select the item.(file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/login.feature:27)\n",
+              "duration": 10058603084,
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "Select the item.",
+            "match": {
+              "location": "stepDefinitions.Steps.select_the_item()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 359731,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "click on Add to cart icon.",
+            "match": {
+              "location": "stepDefinitions.Steps.click_on_add_to_cart_icon()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 584031,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Click on checkout icon.",
+            "match": {
+              "location": "stepDefinitions.Steps.click_on_checkout_icon()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 279570,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "Checkout the item.",
+            "match": {
+              "location": "stepDefinitions.Steps.checkout_the_item()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 490190,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "Enter the \"Rohit\",\"Joshi\" and \"201303\".",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rohit\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"Joshi\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"201303\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinitions.Steps.enter_the_and(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 333184,
+              "status": "skipped"
+            },
+            "line": 32,
+            "name": "Click on Continue.",
+            "match": {
+              "location": "stepDefinitions.Steps.click_on_continue()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 331606,
+              "status": "skipped"
+            },
+            "line": 33,
+            "name": "Validate the details.",
+            "match": {
+              "location": "stepDefinitions.Steps.validate_the_details()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 431996,
+              "status": "skipped"
+            },
+            "line": 34,
+            "name": "Click on Finish button.",
+            "match": {
+              "location": "stepDefinitions.Steps.click_on_finish_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 378016,
+              "status": "skipped"
+            },
+            "line": 35,
+            "name": "Verify the order dispatch message.",
+            "match": {
+              "location": "stepDefinitions.Steps.verify_the_order_dispatch_message()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 373136,
+              "status": "skipped"
+            },
+            "line": 36,
+            "name": "Click on Back home button.",
+            "match": {
+              "location": "stepDefinitions.Steps.click_on_back_home_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 500323,
+              "status": "skipped"
+            },
+            "line": 37,
+            "name": "close the browser.",
+            "match": {
+              "location": "stepDefinitions.Steps.close_the_browser()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Prod"
+          }
+        ]
+      }
+    ],
+    "name": "Login Action with parameter",
+    "description": "",
+    "id": "login-action-with-parameter",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/login.feature",
+    "tags": [
+      {
+        "name": "@Prod",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

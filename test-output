@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.11.0"},"runtime":{"name":"OpenJDK 64-Bit Server VM","version":"18.0.1.1+2-6"},"os":{"name":"Linux"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1654764304","nanos":444611908}}},{"source":{"uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Datadriven.feature","data":"@ignore\nFeature: Verify the datadriven feature\n\n\n\n  Scenario Outline: Validate the login functionality with outline.\n    Given user has a login page with url.\n    When user enter the credential with \"\u003cusername\u003e\" and \"\u003cpassword\u003e\".\n    Then Successfully login in the application.\n\n    Examples:\n    |username|password|\n    |standard_user|secret_sauce|\n    | locked_out_user|secret_sauce|\n    |problem_user|secret_sauce|\n    |performance_glitch_user|secret_sauce|\n\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Datadriven.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@ignore","id":"49b335b5-e57f-4d97-ba3e-5aff83bb3943"}],"language":"en","keyword":"Feature","name":"Verify the datadriven feature","children":[{"scenario":{"location":{"line":6,"column":3},"keyword":"Scenario Outline","name":"Validate the login functionality with outline.","steps":[{"location":{"line":7,"column":5},"keyword":"Given ","text":"user has a login page with url.","id":"dd2d4a0b-35f2-49ae-84e0-7c0ed21dcd1f"},{"location":{"line":8,"column":5},"keyword":"When ","text":"user enter the credential with \"\u003cusername\u003e\" and \"\u003cpassword\u003e\".","id":"b914c4e6-a34d-4253-a60f-3876ad4fa9e7"},{"location":{"line":9,"column":5},"keyword":"Then ","text":"Successfully login in the application.","id":"af45931d-bf77-405e-9178-5c4743f56c4e"}],"examples":[{"location":{"line":11,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":12,"column":5},"cells":[{"location":{"line":12,"column":6},"value":"username"},{"location":{"line":12,"column":15},"value":"password"}],"id":"05abd7fe-4ed4-4dcc-9b83-45c569739aee"},"tableBody":[{"location":{"line":13,"column":5},"cells":[{"location":{"line":13,"column":6},"value":"standard_user"},{"location":{"line":13,"column":20},"value":"secret_sauce"}],"id":"150443f5-e1a7-47bf-91e2-2e90a8bec013"},{"location":{"line":14,"column":5},"cells":[{"location":{"line":14,"column":7},"value":"locked_out_user"},{"location":{"line":14,"column":23},"value":"secret_sauce"}],"id":"d99a5fbf-6677-4a1b-b36c-437f942d57b0"},{"location":{"line":15,"column":5},"cells":[{"location":{"line":15,"column":6},"value":"problem_user"},{"location":{"line":15,"column":19},"value":"secret_sauce"}],"id":"0667b84d-8abe-4184-9f06-0364d9dbc467"},{"location":{"line":16,"column":5},"cells":[{"location":{"line":16,"column":6},"value":"performance_glitch_user"},{"location":{"line":16,"column":30},"value":"secret_sauce"}],"id":"53a4e5c3-37de-464e-b0b9-9058811d74e1"}],"id":"bfcff431-6542-459d-a74e-e2ead970c8bb"}],"id":"e657f320-09fe-4dcc-9be5-709d405ad131"}}]}}},{"pickle":{"id":"a704e9c3-4b2f-4785-a0da-f99c72b67924","uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Datadriven.feature","name":"Validate the login functionality with outline.","language":"en","steps":[{"text":"user has a login page with url.","id":"198ceed2-bf8f-44d2-9740-87fe3c47cb9c","astNodeIds":["dd2d4a0b-35f2-49ae-84e0-7c0ed21dcd1f","150443f5-e1a7-47bf-91e2-2e90a8bec013"]},{"text":"user enter the credential with \"standard_user\" and \"secret_sauce\".","id":"717375e3-3503-4ddd-b7a7-b8cbb99e1308","astNodeIds":["b914c4e6-a34d-4253-a60f-3876ad4fa9e7","150443f5-e1a7-47bf-91e2-2e90a8bec013"]},{"text":"Successfully login in the application.","id":"e51f1c37-26f4-450b-b996-d0228c5f1401","astNodeIds":["af45931d-bf77-405e-9178-5c4743f56c4e","150443f5-e1a7-47bf-91e2-2e90a8bec013"]}],"tags":[{"name":"@ignore","astNodeId":"49b335b5-e57f-4d97-ba3e-5aff83bb3943"}],"astNodeIds":["e657f320-09fe-4dcc-9be5-709d405ad131","150443f5-e1a7-47bf-91e2-2e90a8bec013"]}},{"pickle":{"id":"72c6a166-beed-44d8-909a-f97005cc7daf","uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Datadriven.feature","name":"Validate the login functionality with outline.","language":"en","steps":[{"text":"user has a login page with url.","id":"c191c3b8-4987-4b52-9714-128413af4483","astNodeIds":["dd2d4a0b-35f2-49ae-84e0-7c0ed21dcd1f","d99a5fbf-6677-4a1b-b36c-437f942d57b0"]},{"text":"user enter the credential with \"locked_out_user\" and \"secret_sauce\".","id":"e01ffe23-8f5b-4bd4-9d93-ed14fe54c2c7","astNodeIds":["b914c4e6-a34d-4253-a60f-3876ad4fa9e7","d99a5fbf-6677-4a1b-b36c-437f942d57b0"]},{"text":"Successfully login in the application.","id":"da4bc2ec-e753-4b17-a002-637f774b0711","astNodeIds":["af45931d-bf77-405e-9178-5c4743f56c4e","d99a5fbf-6677-4a1b-b36c-437f942d57b0"]}],"tags":[{"name":"@ignore","astNodeId":"49b335b5-e57f-4d97-ba3e-5aff83bb3943"}],"astNodeIds":["e657f320-09fe-4dcc-9be5-709d405ad131","d99a5fbf-6677-4a1b-b36c-437f942d57b0"]}},{"pickle":{"id":"3fb53d00-fef6-4140-ad88-ec378f6bd37f","uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Datadriven.feature","name":"Validate the login functionality with outline.","language":"en","steps":[{"text":"user has a login page with url.","id":"27e752d4-9c81-43b3-bde0-78d043c073a1","astNodeIds":["dd2d4a0b-35f2-49ae-84e0-7c0ed21dcd1f","0667b84d-8abe-4184-9f06-0364d9dbc467"]},{"text":"user enter the credential with \"problem_user\" and \"secret_sauce\".","id":"ddd9de70-c22d-476a-9959-8f6d576a0273","astNodeIds":["b914c4e6-a34d-4253-a60f-3876ad4fa9e7","0667b84d-8abe-4184-9f06-0364d9dbc467"]},{"text":"Successfully login in the application.","id":"e76d7105-fa37-479f-ab6b-f962bec4d174","astNodeIds":["af45931d-bf77-405e-9178-5c4743f56c4e","0667b84d-8abe-4184-9f06-0364d9dbc467"]}],"tags":[{"name":"@ignore","astNodeId":"49b335b5-e57f-4d97-ba3e-5aff83bb3943"}],"astNodeIds":["e657f320-09fe-4dcc-9be5-709d405ad131","0667b84d-8abe-4184-9f06-0364d9dbc467"]}},{"pickle":{"id":"ce7d5b0a-b024-4aba-9b4a-24f2fca93e87","uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Datadriven.feature","name":"Validate the login functionality with outline.","language":"en","steps":[{"text":"user has a login page with url.","id":"351f1c14-5570-441a-9c2a-0c727d6ff8b0","astNodeIds":["dd2d4a0b-35f2-49ae-84e0-7c0ed21dcd1f","53a4e5c3-37de-464e-b0b9-9058811d74e1"]},{"text":"user enter the credential with \"performance_glitch_user\" and \"secret_sauce\".","id":"b007a034-936d-47a5-818b-667182258d91","astNodeIds":["b914c4e6-a34d-4253-a60f-3876ad4fa9e7","53a4e5c3-37de-464e-b0b9-9058811d74e1"]},{"text":"Successfully login in the application.","id":"5dc6e62c-b342-4cde-80be-86589de1a6ae","astNodeIds":["af45931d-bf77-405e-9178-5c4743f56c4e","53a4e5c3-37de-464e-b0b9-9058811d74e1"]}],"tags":[{"name":"@ignore","astNodeId":"49b335b5-e57f-4d97-ba3e-5aff83bb3943"}],"astNodeIds":["e657f320-09fe-4dcc-9be5-709d405ad131","53a4e5c3-37de-464e-b0b9-9058811d74e1"]}},{"source":{"uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Datatable.feature","data":"@ignore\nFeature: Login Action with data table\n\n  @Smoke\n  Scenario: Successful Login with data table.\n    Given login to Home Page\n    When entering username and password in the application,\n      |usrname|password|\n      |standard_user|secret_sauce|\n    Then Message showing Login Successfully in the application\n    And Item select.\n    And Add to cart icon.\n    And checkout icon.\n    Then Checkout the item which we selected.\n    And Entering  all firstname,lastname and pincode in page.\n     |firstname|lastname|pincode|\n     |Manoj|Mathpal|201303|\n     |Rohit|Mathpal|201304|\n     |Yogesh|Mathpal|201305|\n     |Disha|Mathpal|201306|\n    And Continue button click.\n    And Verify and validate the details of application.\n    And Finish button click.\n    And Validate order dispatch message in page.\n    And Back home button click.\n    And browser closing.","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Datatable.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@ignore","id":"db68cd58-b535-45ca-af10-1006e911f7b0"}],"language":"en","keyword":"Feature","name":"Login Action with data table","children":[{"scenario":{"location":{"line":5,"column":3},"tags":[{"location":{"line":4,"column":3},"name":"@Smoke","id":"d04c30dd-d56c-4f2c-94a8-9bb7aba80e73"}],"keyword":"Scenario","name":"Successful Login with data table.","steps":[{"location":{"line":6,"column":5},"keyword":"Given ","text":"login to Home Page","id":"2d89ed17-d701-4e54-a6c4-2df44188a0ef"},{"location":{"line":7,"column":5},"keyword":"When ","text":"entering username and password in the application,","dataTable":{"location":{"line":8,"column":7},"rows":[{"location":{"line":8,"column":7},"cells":[{"location":{"line":8,"column":8},"value":"usrname"},{"location":{"line":8,"column":16},"value":"password"}],"id":"3c434e25-e2c6-4eab-ad5d-e5135f106bcd"},{"location":{"line":9,"column":7},"cells":[{"location":{"line":9,"column":8},"value":"standard_user"},{"location":{"line":9,"column":22},"value":"secret_sauce"}],"id":"4c37e257-b328-4caa-98ff-3022ec367d87"}]},"id":"b5857e15-c2cd-4548-9470-25d0b6ef2ca6"},{"location":{"line":10,"column":5},"keyword":"Then ","text":"Message showing Login Successfully in the application","id":"91bfb439-2669-4d7a-9eeb-4a52a3574f3c"},{"location":{"line":11,"column":5},"keyword":"And ","text":"Item select.","id":"d83a90e9-c598-441f-9957-cfbbc692c206"},{"location":{"line":12,"column":5},"keyword":"And ","text":"Add to cart icon.","id":"ad23cdf6-fa8f-4fe7-84c3-bdf8739708df"},{"location":{"line":13,"column":5},"keyword":"And ","text":"checkout icon.","id":"66174c49-9bc5-4053-827e-5935a1c3bf48"},{"location":{"line":14,"column":5},"keyword":"Then ","text":"Checkout the item which we selected.","id":"e52d9d12-6f10-4c74-aa5b-21b80e0b000f"},{"location":{"line":15,"column":5},"keyword":"And ","text":"Entering  all firstname,lastname and pincode in page.","dataTable":{"location":{"line":16,"column":6},"rows":[{"location":{"line":16,"column":6},"cells":[{"location":{"line":16,"column":7},"value":"firstname"},{"location":{"line":16,"column":17},"value":"lastname"},{"location":{"line":16,"column":26},"value":"pincode"}],"id":"53256e41-d1bc-4b7c-a10e-7fa97d762c5e"},{"location":{"line":17,"column":6},"cells":[{"location":{"line":17,"column":7},"value":"Manoj"},{"location":{"line":17,"column":13},"value":"Mathpal"},{"location":{"line":17,"column":21},"value":"201303"}],"id":"ec8799cd-5ad8-43f4-9519-ee900ec24145"},{"location":{"line":18,"column":6},"cells":[{"location":{"line":18,"column":7},"value":"Rohit"},{"location":{"line":18,"column":13},"value":"Mathpal"},{"location":{"line":18,"column":21},"value":"201304"}],"id":"2db71085-1ba0-42c2-b94a-82907fcf475c"},{"location":{"line":19,"column":6},"cells":[{"location":{"line":19,"column":7},"value":"Yogesh"},{"location":{"line":19,"column":14},"value":"Mathpal"},{"location":{"line":19,"column":22},"value":"201305"}],"id":"37ac0b7d-aac9-4de2-8c7d-d89d08558bf2"},{"location":{"line":20,"column":6},"cells":[{"location":{"line":20,"column":7},"value":"Disha"},{"location":{"line":20,"column":13},"value":"Mathpal"},{"location":{"line":20,"column":21},"value":"201306"}],"id":"3e4ab953-2954-43f3-bb5b-f192b577650f"}]},"id":"7781754f-4327-4425-b344-06f8b0029c6a"},{"location":{"line":21,"column":5},"keyword":"And ","text":"Continue button click.","id":"e7142ebe-dd79-4dcd-8118-27a702ac708b"},{"location":{"line":22,"column":5},"keyword":"And ","text":"Verify and validate the details of application.","id":"5e637bed-3374-4a19-aa88-f6527d4377bc"},{"location":{"line":23,"column":5},"keyword":"And ","text":"Finish button click.","id":"56f3b3c4-adcf-4fb8-92fd-60ff2a7d3acb"},{"location":{"line":24,"column":5},"keyword":"And ","text":"Validate order dispatch message in page.","id":"c0ba7ec2-c74f-4acf-9fdb-6937b2594beb"},{"location":{"line":25,"column":5},"keyword":"And ","text":"Back home button click.","id":"06e9e380-befe-4de0-b38a-af6b2db0c6dd"},{"location":{"line":26,"column":5},"keyword":"And ","text":"browser closing.","id":"4c2f359b-63f9-46bf-bd02-0c48364ce695"}],"id":"ef9228ff-b2bf-45f2-b7ae-b8fa285ee252"}}]}}},{"pickle":{"id":"2ffe5ac1-9b78-405c-aa64-556960940454","uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Datatable.feature","name":"Successful Login with data table.","language":"en","steps":[{"text":"login to Home Page","id":"7395bca6-4c3d-408b-b511-f3f72a7188dd","astNodeIds":["2d89ed17-d701-4e54-a6c4-2df44188a0ef"]},{"text":"entering username and password in the application,","argument":{"dataTable":{"rows":[{"cells":[{"value":"usrname"},{"value":"password"}]},{"cells":[{"value":"standard_user"},{"value":"secret_sauce"}]}]}},"id":"d16dd859-65c5-4663-b465-5436b1b15832","astNodeIds":["b5857e15-c2cd-4548-9470-25d0b6ef2ca6"]},{"text":"Message showing Login Successfully in the application","id":"d5ac9350-fb1c-4cca-8117-128c6a1893ce","astNodeIds":["91bfb439-2669-4d7a-9eeb-4a52a3574f3c"]},{"text":"Item select.","id":"dd9452db-28f8-4c6d-b936-ae934c22cb12","astNodeIds":["d83a90e9-c598-441f-9957-cfbbc692c206"]},{"text":"Add to cart icon.","id":"333d39bd-a205-4cbe-9c09-c2d1fe683447","astNodeIds":["ad23cdf6-fa8f-4fe7-84c3-bdf8739708df"]},{"text":"checkout icon.","id":"546be38e-c760-4724-8aa5-03a165a9dc5d","astNodeIds":["66174c49-9bc5-4053-827e-5935a1c3bf48"]},{"text":"Checkout the item which we selected.","id":"5862b462-4df1-4968-8d56-81823bf2ab07","astNodeIds":["e52d9d12-6f10-4c74-aa5b-21b80e0b000f"]},{"text":"Entering  all firstname,lastname and pincode in page.","argument":{"dataTable":{"rows":[{"cells":[{"value":"firstname"},{"value":"lastname"},{"value":"pincode"}]},{"cells":[{"value":"Manoj"},{"value":"Mathpal"},{"value":"201303"}]},{"cells":[{"value":"Rohit"},{"value":"Mathpal"},{"value":"201304"}]},{"cells":[{"value":"Yogesh"},{"value":"Mathpal"},{"value":"201305"}]},{"cells":[{"value":"Disha"},{"value":"Mathpal"},{"value":"201306"}]}]}},"id":"be693a4d-05f2-4d4b-a94d-857d0f4f99d7","astNodeIds":["7781754f-4327-4425-b344-06f8b0029c6a"]},{"text":"Continue button click.","id":"b8199f9c-6e72-4f9a-a2e6-9928f687952a","astNodeIds":["e7142ebe-dd79-4dcd-8118-27a702ac708b"]},{"text":"Verify and validate the details of application.","id":"f005700a-c150-437c-b57f-81276d4b53a9","astNodeIds":["5e637bed-3374-4a19-aa88-f6527d4377bc"]},{"text":"Finish button click.","id":"631cce7b-c004-44d8-a781-d6a684a4bc40","astNodeIds":["56f3b3c4-adcf-4fb8-92fd-60ff2a7d3acb"]},{"text":"Validate order dispatch message in page.","id":"c4682826-8f23-4474-bfbd-34a8fde27159","astNodeIds":["c0ba7ec2-c74f-4acf-9fdb-6937b2594beb"]},{"text":"Back home button click.","id":"12a86c8d-8e4f-47b4-b6ea-1e812a97609b","astNodeIds":["06e9e380-befe-4de0-b38a-af6b2db0c6dd"]},{"text":"browser closing.","id":"0f1223d6-5f38-4ced-bc63-4ce92c9fea86","astNodeIds":["4c2f359b-63f9-46bf-bd02-0c48364ce695"]}],"tags":[{"name":"@ignore","astNodeId":"db68cd58-b535-45ca-af10-1006e911f7b0"},{"name":"@Smoke","astNodeId":"d04c30dd-d56c-4f2c-94a8-9bb7aba80e73"}],"astNodeIds":["ef9228ff-b2bf-45f2-b7ae-b8fa285ee252"]}},{"source":{"uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Excelreader.feature","data":"\nFeature: Verify the data with excel sheet.\n\n  Scenario Outline: Validate the user navigate the home page.\n    Given user navigate the home page with data.\n    When user verify the data with sheetname \"\u003csheetname\u003e\" and rownumber \u003cRowNumber\u003e.\n    Then user click on login button.\n    Then it will show the successfull message.\nExamples:\n\n    |sheetname|RowNumber|\n    |demo|0|\n    |demo|1|\n    |demo|2|\n\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Excelreader.feature","feature":{"location":{"line":2,"column":1},"language":"en","keyword":"Feature","name":"Verify the data with excel sheet.","children":[{"scenario":{"location":{"line":4,"column":3},"keyword":"Scenario Outline","name":"Validate the user navigate the home page.","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"user navigate the home page with data.","id":"793e1af6-15d0-47e9-a8af-36bef1a99ba7"},{"location":{"line":6,"column":5},"keyword":"When ","text":"user verify the data with sheetname \"\u003csheetname\u003e\" and rownumber \u003cRowNumber\u003e.","id":"f475a394-1250-4b6d-9f22-87176ef0b86e"},{"location":{"line":7,"column":5},"keyword":"Then ","text":"user click on login button.","id":"b6960ad0-1da3-497b-b323-857850a9710f"},{"location":{"line":8,"column":5},"keyword":"Then ","text":"it will show the successfull message.","id":"364e6693-ab40-4830-b617-28b9dd6b0498"}],"examples":[{"location":{"line":9,"column":1},"keyword":"Examples","tableHeader":{"location":{"line":11,"column":5},"cells":[{"location":{"line":11,"column":6},"value":"sheetname"},{"location":{"line":11,"column":16},"value":"RowNumber"}],"id":"ed6f1761-d3bf-4cc9-acc2-797aa9c4db5e"},"tableBody":[{"location":{"line":12,"column":5},"cells":[{"location":{"line":12,"column":6},"value":"demo"},{"location":{"line":12,"column":11},"value":"0"}],"id":"fb64bc5d-5217-454d-b4e0-f14289ad5dd8"},{"location":{"line":13,"column":5},"cells":[{"location":{"line":13,"column":6},"value":"demo"},{"location":{"line":13,"column":11},"value":"1"}],"id":"bc06083b-50e5-479c-9016-4eafb091d13c"},{"location":{"line":14,"column":5},"cells":[{"location":{"line":14,"column":6},"value":"demo"},{"location":{"line":14,"column":11},"value":"2"}],"id":"4fbc9566-2a6a-4d8d-978b-2fbb6957ce4e"}],"id":"4e113369-7be0-4981-8a90-44def600d807"}],"id":"d30fa2f9-75ea-42b7-b3fd-82ec7eab8ca1"}}]}}},{"pickle":{"id":"0fab9c93-b2f1-4412-bcc6-bef2e8997663","uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Excelreader.feature","name":"Validate the user navigate the home page.","language":"en","steps":[{"text":"user navigate the home page with data.","id":"406df537-ec79-4375-a865-426d62ae32ee","astNodeIds":["793e1af6-15d0-47e9-a8af-36bef1a99ba7","fb64bc5d-5217-454d-b4e0-f14289ad5dd8"]},{"text":"user verify the data with sheetname \"demo\" and rownumber 0.","id":"26b54db6-86fb-4128-b362-21cc4914a837","astNodeIds":["f475a394-1250-4b6d-9f22-87176ef0b86e","fb64bc5d-5217-454d-b4e0-f14289ad5dd8"]},{"text":"user click on login button.","id":"97d8615e-aeac-4395-be54-9514be0e719e","astNodeIds":["b6960ad0-1da3-497b-b323-857850a9710f","fb64bc5d-5217-454d-b4e0-f14289ad5dd8"]},{"text":"it will show the successfull message.","id":"e50a32a3-2767-4702-a5ba-423c6415ce20","astNodeIds":["364e6693-ab40-4830-b617-28b9dd6b0498","fb64bc5d-5217-454d-b4e0-f14289ad5dd8"]}],"astNodeIds":["d30fa2f9-75ea-42b7-b3fd-82ec7eab8ca1","fb64bc5d-5217-454d-b4e0-f14289ad5dd8"]}},{"pickle":{"id":"61f78e06-c674-47a8-9c2b-6bf8eea4b6ff","uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Excelreader.feature","name":"Validate the user navigate the home page.","language":"en","steps":[{"text":"user navigate the home page with data.","id":"11361e9f-eaef-4709-b1ca-239a37e83a02","astNodeIds":["793e1af6-15d0-47e9-a8af-36bef1a99ba7","bc06083b-50e5-479c-9016-4eafb091d13c"]},{"text":"user verify the data with sheetname \"demo\" and rownumber 1.","id":"51ae0ea1-5c10-4e1c-93ef-baf45092e266","astNodeIds":["f475a394-1250-4b6d-9f22-87176ef0b86e","bc06083b-50e5-479c-9016-4eafb091d13c"]},{"text":"user click on login button.","id":"0cd1cc1d-4a32-47a8-a976-3bffae94d080","astNodeIds":["b6960ad0-1da3-497b-b323-857850a9710f","bc06083b-50e5-479c-9016-4eafb091d13c"]},{"text":"it will show the successfull message.","id":"6979dfa5-da0e-403f-b798-08616f8eeede","astNodeIds":["364e6693-ab40-4830-b617-28b9dd6b0498","bc06083b-50e5-479c-9016-4eafb091d13c"]}],"astNodeIds":["d30fa2f9-75ea-42b7-b3fd-82ec7eab8ca1","bc06083b-50e5-479c-9016-4eafb091d13c"]}},{"pickle":{"id":"1e204a29-94c5-4794-83d0-95b70ea70a98","uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/Excelreader.feature","name":"Validate the user navigate the home page.","language":"en","steps":[{"text":"user navigate the home page with data.","id":"1ac67bfa-a8bb-4a2e-be39-95404ad263c6","astNodeIds":["793e1af6-15d0-47e9-a8af-36bef1a99ba7","4fbc9566-2a6a-4d8d-978b-2fbb6957ce4e"]},{"text":"user verify the data with sheetname \"demo\" and rownumber 2.","id":"6fb55388-ae84-4bf1-bac1-8cdb78df268c","astNodeIds":["f475a394-1250-4b6d-9f22-87176ef0b86e","4fbc9566-2a6a-4d8d-978b-2fbb6957ce4e"]},{"text":"user click on login button.","id":"40d66a63-2bba-4c98-8238-2a30e63d0824","astNodeIds":["b6960ad0-1da3-497b-b323-857850a9710f","4fbc9566-2a6a-4d8d-978b-2fbb6957ce4e"]},{"text":"it will show the successfull message.","id":"f2de0641-f9bd-4a56-acfd-3622a8a38cca","astNodeIds":["364e6693-ab40-4830-b617-28b9dd6b0498","4fbc9566-2a6a-4d8d-978b-2fbb6957ce4e"]}],"astNodeIds":["d30fa2f9-75ea-42b7-b3fd-82ec7eab8ca1","4fbc9566-2a6a-4d8d-978b-2fbb6957ce4e"]}},{"source":{"uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/login.feature","data":"@ignore\nFeature: Login Action with parameter\n\n  Background:\n    Given User is on Home Page\n\n  Scenario: Successful Login with Valid Credentials and parameter 1.\n\n    When User enters \"standard_user\" and \"secret_sauce\"\n    Then Message displayed Login Successfully\n    And Select the item.\n    And click on Add to cart icon.\n    And Click on checkout icon.\n    Then Checkout the item.\n    And Enter the \"Rohit\",\"Joshi\" and \"201303\".\n    And Click on Continue.\n    And Validate the details.\n    And Click on Finish button.\n    And Verify the order dispatch message.\n    And Click on Back home button.\n    And close the browser.\n\n\n\n\n\n\n\n\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/login.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@ignore","id":"cc4e1388-c914-426b-a13c-a35f9c2bdc4d"}],"language":"en","keyword":"Feature","name":"Login Action with parameter","children":[{"background":{"location":{"line":4,"column":3},"keyword":"Background","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"User is on Home Page","id":"797d3dcd-3386-4bbd-acbe-7e192c3dfbd6"}],"id":"bcfc5b4f-10bc-428d-a706-0669cc0b04c3"}},{"scenario":{"location":{"line":7,"column":3},"keyword":"Scenario","name":"Successful Login with Valid Credentials and parameter 1.","steps":[{"location":{"line":9,"column":5},"keyword":"When ","text":"User enters \"standard_user\" and \"secret_sauce\"","id":"2d570ac7-3617-4c78-9e76-703e3e9d1af0"},{"location":{"line":10,"column":5},"keyword":"Then ","text":"Message displayed Login Successfully","id":"89937761-4128-4ce4-b50a-ea2aa8abcc1a"},{"location":{"line":11,"column":5},"keyword":"And ","text":"Select the item.","id":"7e1da898-3466-44e2-ba10-fc7a0affcfd8"},{"location":{"line":12,"column":5},"keyword":"And ","text":"click on Add to cart icon.","id":"2dbdaaf3-5fa9-4b23-b872-ad8435574a13"},{"location":{"line":13,"column":5},"keyword":"And ","text":"Click on checkout icon.","id":"1f874e22-a1a8-4660-bea9-02215fd63c91"},{"location":{"line":14,"column":5},"keyword":"Then ","text":"Checkout the item.","id":"d11918b3-c9c5-4f59-b81c-851ed255f6b2"},{"location":{"line":15,"column":5},"keyword":"And ","text":"Enter the \"Rohit\",\"Joshi\" and \"201303\".","id":"66f24082-02b6-4139-97f6-ed621c567e3f"},{"location":{"line":16,"column":5},"keyword":"And ","text":"Click on Continue.","id":"55b8f5a8-52c4-4d0a-8b77-beca8e43dda7"},{"location":{"line":17,"column":5},"keyword":"And ","text":"Validate the details.","id":"ac6c4c42-f5ce-4187-b3e2-8820a3c31992"},{"location":{"line":18,"column":5},"keyword":"And ","text":"Click on Finish button.","id":"7d812cae-da88-4993-ae89-e8a8c5ad7110"},{"location":{"line":19,"column":5},"keyword":"And ","text":"Verify the order dispatch message.","id":"e15c3edf-f5ee-4a72-a0b4-a198340cb604"},{"location":{"line":20,"column":5},"keyword":"And ","text":"Click on Back home button.","id":"65f74945-1a02-4dfe-a852-ca1545823fa1"},{"location":{"line":21,"column":5},"keyword":"And ","text":"close the browser.","id":"87018369-0cbb-4fdd-a02a-3b7b3f9111e5"}],"id":"0e4912cb-e825-4019-ac98-bec2129da175"}}]}}},{"pickle":{"id":"b37eb8d6-7169-460c-ac6f-2dddc169d755","uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/login.feature","name":"Successful Login with Valid Credentials and parameter 1.","language":"en","steps":[{"text":"User is on Home Page","id":"025b521b-07fe-4526-81e2-128118399d04","astNodeIds":["797d3dcd-3386-4bbd-acbe-7e192c3dfbd6"]},{"text":"User enters \"standard_user\" and \"secret_sauce\"","id":"78aedded-0736-46c9-8cd4-4565a4c07c80","astNodeIds":["2d570ac7-3617-4c78-9e76-703e3e9d1af0"]},{"text":"Message displayed Login Successfully","id":"ca815843-716d-4d9d-a087-4e1cd6347cce","astNodeIds":["89937761-4128-4ce4-b50a-ea2aa8abcc1a"]},{"text":"Select the item.","id":"15008261-3b14-44f2-a37f-aac1571fee56","astNodeIds":["7e1da898-3466-44e2-ba10-fc7a0affcfd8"]},{"text":"click on Add to cart icon.","id":"b5a66cf2-c537-428f-ae21-bf59f1b8bcfc","astNodeIds":["2dbdaaf3-5fa9-4b23-b872-ad8435574a13"]},{"text":"Click on checkout icon.","id":"a161bc0f-630c-4ae8-ab9e-7f1089835973","astNodeIds":["1f874e22-a1a8-4660-bea9-02215fd63c91"]},{"text":"Checkout the item.","id":"241235f8-c168-4d11-8ecc-3bf442432d57","astNodeIds":["d11918b3-c9c5-4f59-b81c-851ed255f6b2"]},{"text":"Enter the \"Rohit\",\"Joshi\" and \"201303\".","id":"fdd8ae37-5299-49d5-a27e-d9287e902516","astNodeIds":["66f24082-02b6-4139-97f6-ed621c567e3f"]},{"text":"Click on Continue.","id":"a190035a-9fdc-450e-a5c6-5fe3d7190b63","astNodeIds":["55b8f5a8-52c4-4d0a-8b77-beca8e43dda7"]},{"text":"Validate the details.","id":"12f6b8d2-edf6-481b-8db0-474a3eef2ec4","astNodeIds":["ac6c4c42-f5ce-4187-b3e2-8820a3c31992"]},{"text":"Click on Finish button.","id":"5a6e8184-5016-40a6-92b2-65dfc2c38c6c","astNodeIds":["7d812cae-da88-4993-ae89-e8a8c5ad7110"]},{"text":"Verify the order dispatch message.","id":"e39ca97c-096b-490b-80aa-522406157bf2","astNodeIds":["e15c3edf-f5ee-4a72-a0b4-a198340cb604"]},{"text":"Click on Back home button.","id":"0b1fd8a3-a7b2-4d48-93f8-94562808463d","astNodeIds":["65f74945-1a02-4dfe-a852-ca1545823fa1"]},{"text":"close the browser.","id":"a1ad84cd-d654-482f-8a9d-3d7907860719","astNodeIds":["87018369-0cbb-4fdd-a02a-3b7b3f9111e5"]}],"tags":[{"name":"@ignore","astNodeId":"cc4e1388-c914-426b-a13c-a35f9c2bdc4d"}],"astNodeIds":["0e4912cb-e825-4019-ac98-bec2129da175"]}},{"source":{"uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/pomlogin.feature","data":"@sanity\nFeature: Pom Login Action with parameter\n\n\n  Scenario Outline: Successful Pom Login with Valid Credentials.\n    Given Pom User is on login Page\n    When user verify the data with sheetname \"\u003csheetname\u003e\" and rownumber \u003cRowNumber\u003e.\n    Then displayed message Login Successfully\n    Then close browsing window.\n\n    Examples:\n      |sheetname|RowNumber|\n      |demo|0|\n      |demo|1|\n      |demo|2|\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/pomlogin.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@sanity","id":"9724e21a-e2a7-4eb8-91a1-e1a8de85b681"}],"language":"en","keyword":"Feature","name":"Pom Login Action with parameter","children":[{"scenario":{"location":{"line":5,"column":3},"keyword":"Scenario Outline","name":"Successful Pom Login with Valid Credentials.","steps":[{"location":{"line":6,"column":5},"keyword":"Given ","text":"Pom User is on login Page","id":"741ec5c5-d046-4ad5-9ec8-fb8c14f2d217"},{"location":{"line":7,"column":5},"keyword":"When ","text":"user verify the data with sheetname \"\u003csheetname\u003e\" and rownumber \u003cRowNumber\u003e.","id":"d505d023-2e3e-41d0-b8c1-8dce63ee01e8"},{"location":{"line":8,"column":5},"keyword":"Then ","text":"displayed message Login Successfully","id":"bb265fa5-18a0-4e4a-9f50-42b755891410"},{"location":{"line":9,"column":5},"keyword":"Then ","text":"close browsing window.","id":"4ced5cc0-9152-4092-87fb-a97be737d860"}],"examples":[{"location":{"line":11,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":12,"column":7},"cells":[{"location":{"line":12,"column":8},"value":"sheetname"},{"location":{"line":12,"column":18},"value":"RowNumber"}],"id":"018d758d-861b-4f82-b887-6c89f9a21f24"},"tableBody":[{"location":{"line":13,"column":7},"cells":[{"location":{"line":13,"column":8},"value":"demo"},{"location":{"line":13,"column":13},"value":"0"}],"id":"6802bf73-2003-4b95-ae98-49570040c9fd"},{"location":{"line":14,"column":7},"cells":[{"location":{"line":14,"column":8},"value":"demo"},{"location":{"line":14,"column":13},"value":"1"}],"id":"11e5fd7c-e22a-4669-828e-8273e22f8c47"},{"location":{"line":15,"column":7},"cells":[{"location":{"line":15,"column":8},"value":"demo"},{"location":{"line":15,"column":13},"value":"2"}],"id":"525e0506-8ad2-45b6-bce0-bb8b7a3c8d12"}],"id":"4311242b-7e2d-4107-ae38-65941bb9bdfb"}],"id":"17230502-a6ca-49ee-b296-3bc2e42f7ed5"}}]}}},{"pickle":{"id":"987312c0-dcf4-410b-8fd4-370ef4fa389e","uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/pomlogin.feature","name":"Successful Pom Login with Valid Credentials.","language":"en","steps":[{"text":"Pom User is on login Page","id":"0a08116f-680a-42db-b287-e3d8f3967d4a","astNodeIds":["741ec5c5-d046-4ad5-9ec8-fb8c14f2d217","6802bf73-2003-4b95-ae98-49570040c9fd"]},{"text":"user verify the data with sheetname \"demo\" and rownumber 0.","id":"d49552a1-05c4-4824-98b1-dbcf1fd1e0d6","astNodeIds":["d505d023-2e3e-41d0-b8c1-8dce63ee01e8","6802bf73-2003-4b95-ae98-49570040c9fd"]},{"text":"displayed message Login Successfully","id":"1c6d7573-fe8b-4235-ad93-79606d477505","astNodeIds":["bb265fa5-18a0-4e4a-9f50-42b755891410","6802bf73-2003-4b95-ae98-49570040c9fd"]},{"text":"close browsing window.","id":"56a1f772-b68f-47e3-bd85-45b56978d984","astNodeIds":["4ced5cc0-9152-4092-87fb-a97be737d860","6802bf73-2003-4b95-ae98-49570040c9fd"]}],"tags":[{"name":"@sanity","astNodeId":"9724e21a-e2a7-4eb8-91a1-e1a8de85b681"}],"astNodeIds":["17230502-a6ca-49ee-b296-3bc2e42f7ed5","6802bf73-2003-4b95-ae98-49570040c9fd"]}},{"pickle":{"id":"232cae56-6f3e-480a-bbea-249f96b7483a","uri":"file:///home/manoj/IdeaProjects/HCLSDET/src/test/java/Features/pomlogin.feature","name":"Successful Pom Login with Valid Credentials.","language":"en","steps":[{"text":"Pom User is on login Page","id":"d9ffa789-abda-4bc5-b716-3f00d76c0896","astNodeIds":["741ec5c5-d046-4ad5-9ec8-fb8c14f2d217","11e5fd7c-e
