@@ -31,21 +31,21 @@ public class Sdethook {
     }
 
 
-    @Before(order = 0)
+    @Before("@Smoke")
     public void getProperty()
     {
         configReader  = new ConfigReader();
         prop = configReader.init_prop();
 
     }
-    @Before(order = 1)
+    @Before("@Smoke")
     public void launchbrowser()
     {
         String browsername = prop.getProperty("browser");
         driverFactory = new DriverFactory();
         driverFactory.init_driver(browsername);
     }
-    @After(order = 1)
+    @After("@Smoke")
     public void teardown(Scenario sc)
     {
         if(sc.isFailed())
