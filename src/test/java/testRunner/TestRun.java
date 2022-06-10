@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         (
                 features = "/home/manoj/IdeaProjects/HCLSDET/src/test/java/Features",
                 glue = {"stepDefinitions","HclHooks"},
-                tags = "@Prod",
+                tags = "@sanity",
                 plugin = {"pretty","html:target/cucumber-html-report",
                         "json:target/cucumber-reports/cucumber.json",
                         "junit:target/cucumber-reports/cucumber.xml",
