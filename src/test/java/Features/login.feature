@@ -22,7 +22,7 @@ Feature: Login Action with parameter
 
   Scenario: Successful Login with Valid Credentials and parameter 2.
 
-    When User enters "standard_user1" and "secret_sauce1"
+    When User enters "standard_user" and "secret_sauce1"
     Then Message displayed Login Successfully
     And Select the item.
     And click on Add to cart icon.

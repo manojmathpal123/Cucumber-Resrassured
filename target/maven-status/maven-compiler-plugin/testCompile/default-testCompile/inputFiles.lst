@@ -5,4 +5,6 @@
 /home/manoj/IdeaProjects/HCLSDET/src/test/java/testRunner/TestRun.java
 /home/manoj/IdeaProjects/HCLSDET/src/test/java/stepDefinitions/Datadriven.java
 /home/manoj/IdeaProjects/HCLSDET/src/test/java/stepDefinitions/Datatablesteps.java
+/home/manoj/IdeaProjects/HCLSDET/src/test/java/testRunner/Failedrerun.java
 /home/manoj/IdeaProjects/HCLSDET/src/test/java/PageObject/LoginPage.java
+/home/manoj/IdeaProjects/HCLSDET/src/test/java/stepDefinitions/ApiTestRunners.java
